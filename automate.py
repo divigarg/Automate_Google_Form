@@ -36,6 +36,7 @@ for i in range(100):
             github_url.send_keys(URL)
             if (name.get_attribute('data-initial-value')==NAME and github_url.get_attribute('data-initial-value')==URL
                 and roll_no.get_attribute('data-initial-value')==ROLL_NO and check.get_attribute('value')==KEY):
+                time.sleep(1)
                 submit=driver.find_element_by_xpath('//*[@id="mG61Hd"]/div/div/div[3]/div[1]/div/div/span/span')
                 submit.click()
                 print("Done {}".format(i+1))
