@@ -20,7 +20,7 @@ driver.get(form)
 for i in range(100):
     print("Running {}".format(i+1))
     while True:
-        check_url = form + "/formResponse"
+        check_url = form [:-9]+ "/formResponse"
         if driver.current_url==check_url:
             break
         else:
