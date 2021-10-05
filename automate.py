@@ -14,7 +14,8 @@ RADIO={'Yes':1,'No':2,'Maybe':3}
 
 driver=webdriver.Chrome("C:\\Users\divyansh\Desktop\chromedriver.exe")
 
-driver.get('https://docs.google.com/forms/d/e/1FAIpQLSfxsg59ggPdonbOLakPTwn_qQk-P0euw531kGt2pdDxSlnB9Q/viewform')
+form=input("Enter the form address: ").strip()
+driver.get(form)
 
 for i in range(100):
     print("Running {}".format(i+1))
