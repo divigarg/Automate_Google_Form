@@ -20,7 +20,8 @@ driver.get(form)
 for i in range(100):
     print("Running {}".format(i+1))
     while True:
-        if driver.current_url=="https://docs.google.com/forms/d/e/1FAIpQLSfxsg59ggPdonbOLakPTwn_qQk-P0euw531kGt2pdDxSlnB9Q/formResponse":
+        check_url = form + "/formResponse"
+        if driver.current_url==check_url:
             break
         else:
             name=driver.find_element_by_xpath('//*[@id="mG61Hd"]/div/div/div[2]/div[1]/div/div[2]/div/div[1]/div/div[1]/input')
